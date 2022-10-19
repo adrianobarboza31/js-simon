@@ -4,19 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <button type="button" id="btn">clicca qui</button>
-    <div id="testo">
+    <header>
 
-    </div>
-    <p id="timer"></p>
-    <label for="">inserisci i numeri che hai visto</label>
-    <input id="adri" type="number">
-    <button id="num">clicca qui</button>
-    <p id="bo"></p>
+    </header>
+    <main class="flex">
+        <div class="width">
+            <label for=""><h3>memorizza i numeri qui sotto</h3>
+              <span> <i style="font-size:30px" class="fa">&#xf063;</i></span> 
+            </label>
+            <br>
+            
+            <div id="testo" class="grande">
+    
+            </div>
+            <div class="giu">
+                <h3>hai ha disposizione<p id="timer"></p>secondi</h3>
+            </div>
+            
+        </div>
+        <div class="width">
+                <label for=""><h4>inserisci i numeri che hai visto alla fine del timer</h4></label>
+                <br>
+            <input id="adri" type="number">
+            <button id="num">inserisci</button>
+            <br>
+            <p class="grande" id="bo"></p>
+        </div>
+    
+    </main>
+    
     <script src="./js/script.js"></script>
     
 </body>

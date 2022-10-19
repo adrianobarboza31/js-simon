@@ -12,10 +12,9 @@ let array2=[]
 let timers=30
 const bottone=document.getElementById("num")
 const secondi= document.getElementById("timer")
-bottonePrincipale.addEventListener("click",myfunction)
+const timer= setInterval(myfunction, 1000);
 console.log(numeri)
 function myfunction(){ 
-    const timer= setInterval(myfunction, 1000);
     while(numeri.length<nrandom){
         let random= Math.floor(Math.random() * 100) + 1;
         if (!numeri.includes(random)){
@@ -58,4 +57,3 @@ function myfunction(){
 
 
    
-
