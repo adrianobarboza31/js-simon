@@ -4,6 +4,7 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 bo=document.getElementById("testo")
 let testo= document.getElementById("bo")
+const bottonePrincipale=document.getElementById("btn")
 let nrandom=5
 let numeri=[]
 let array=[]
@@ -11,15 +12,16 @@ let array2=[]
 let timers=30
 const bottone=document.getElementById("num")
 const secondi= document.getElementById("timer")
-const timer= setInterval(myfunction, 1000);
-while(numeri.length<nrandom){
-    let random= Math.floor(Math.random() * 100) + 1;
-    if (!numeri.includes(random)){
-        numeri.push(random)
-    }
-}
+bottonePrincipale.addEventListener("click",myfunction)
 console.log(numeri)
 function myfunction(){ 
+    const timer= setInterval(myfunction, 1000);
+    while(numeri.length<nrandom){
+        let random= Math.floor(Math.random() * 100) + 1;
+        if (!numeri.includes(random)){
+            numeri.push(random)
+        }
+    }
     secondi.innerHTML=timers
     timers--
     if(timers<0){
@@ -31,6 +33,8 @@ function myfunction(){
             console.log(inserito)
             if(!array2.includes(inserito)){
                 array2.push(inserito)
+                document.getElementById("adri").value=""
+                
                 if(array2.length<=nrandom){
                     if (numeri.includes(inserito)){
                         array.push(inserito)
